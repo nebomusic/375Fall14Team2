@@ -1,5 +1,7 @@
 package com.example.coffeeapp;
 
+import java.util.Date;
+
 
 
 public class Drink {
@@ -73,7 +75,16 @@ public class Drink {
 	public String getDairy()  {
 		return dairy;
 		}
-	public getSize()  {
-		
+	public int getSize()  {
+		return size;
 	}
-}
+	public Date getDate()  {
+		return date;
+	}
+	public boolean getServed()  {
+		return served;
+	}
+	public void setServed(boolean s)  {
+		served = s;
+	}
+} // end class Drink 
