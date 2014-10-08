@@ -14,6 +14,10 @@ public class Orders {
 	
 	//Accessor
 	public List <Drink> getDrinks(){
+		return drinks;
+	}
+// Add Drink to the List
+	public void addDrink(Drink d){
 		drinks.add(d);
 	}
 	
@@ -28,9 +32,19 @@ public class Orders {
 			}
 	return total;
 	}//End get NumServed
-//End: Monarchik
-	//10/8/2014 1:46pm
+
+
+	//Get individual order
+	public Drink getDrink(int i){
+		return drinks.get(i);
+	}
 	
+//Get the Drinks ordered
+	public int getNumDrinks(){
+		return drinks.size();
+	}
+	//End Monarchik Code
+	//10.8.2014 In Class
 	
 	
 	}//End Orders Class
