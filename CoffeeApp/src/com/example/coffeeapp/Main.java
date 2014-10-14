@@ -4,8 +4,24 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 public class Main extends Activity {
+	private Button btnHot;
+	private Button btnCoffee;
+	private Button btnFrap;
+	private Button btnExpres;
+	private Button btnTall;
+	private Button btnGrande;
+	private Button btnVenti;
+	private Spinner spinnerFlavor;
+	private Spinner spinnerDairy;
+	private Button btnAddDrink;
+	private Button btnResetDrink;
+	private TextView textDrinksAdded;
+	private TextView textCurrentDrink;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
