@@ -13,18 +13,21 @@
     <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal" >
 
         <Button
             android:id="@+id/btnHot"
-            android:layout_width="wrap_content"
+            android:layout_weight = ".75"
             android:layout_height="wrap_content"
             android:onClick = "btnHotClicked"
+           
             android:text="Hot" />
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+            android:layout_weight = ".25"
+            android:gravity = "center"
             android:layout_height="wrap_content"
             android:text="---" />
 
@@ -34,26 +37,27 @@
         android:id="@+id/tableRow2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="_baseline" >
+        android:baselineAligned="_baseline"
+        android:gravity="center_vertical|center_horizontal" >
 
         <Button
             android:id="@+id/btnCoffee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width = "wrap_content"
+            android:layout_height="match_parent"
             android:onClick = "coffeeClicked"
             android:text="Coffee" />
 
         <Button
             android:id="@+id/btnFrap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+                    android:layout_width = "wrap_content"
+            android:layout_height="match_parent"
             android:onClick = "frapClicked"
             android:text="Frappachino" />
 
         <Button
             android:id="@+id/btnExpres"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+                      android:layout_width = "wrap_content"
+            android:layout_height="match_parent"
             android:onClick = "expresClicked"
             android:text="Expresso" />
 
@@ -66,21 +70,21 @@
 
         <Button
             android:id="@+id/btnTall"
-            android:layout_width="wrap_content"
+            android:layout_weight = ".33"
             android:layout_height="wrap_content"
             android:onClick = "tallClicked"
             android:text="Tall" />
 
         <Button
             android:id="@+id/btnGrande"
-            android:layout_width="wrap_content"
+            android:layout_weight = ".33"
             android:layout_height="wrap_content"
             android:onClick = "grandeClicked"
             android:text="Grande" />
 
         <Button
             android:id="@+id/btnVenti"
-            android:layout_width="wrap_content"
+            android:layout_weight = ".33"
             android:layout_height="wrap_content"
             android:onClick = "ventiClicked"
             android:text="Venti" />
@@ -118,7 +122,7 @@
 
         <Button
             android:id="@+id/btnAddDrink"
-            android:layout_width="wrap_content"
+            android:layout_weight = "1"
             android:layout_height="wrap_content"
             android:onClick="addDrinkClicked"
             android:text="Add Drink" />
@@ -132,7 +136,7 @@
 
         <Button
             android:id="@+id/btnReset"
-            android:layout_width="wrap_content"
+            android:layout_weight = "1"
             android:layout_height="wrap_content"
             android:onClick = "resetDrink"
             android:text="Reset Order" />
@@ -146,15 +150,17 @@
 
         <TextView
             android:id="@+id/textDrinksAdded"
-            android:layout_width="wrap_content"
+            android:layout_weight = ".25"
             android:layout_height="wrap_content"
             android:text="---" />
 
         <TextView
             android:id="@+id/textCurrentDrink"
-            android:layout_width="wrap_content"
+
+            android:layout_weight = ".75"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+
+            android:text="---" />
 
     </TableRow>
 
