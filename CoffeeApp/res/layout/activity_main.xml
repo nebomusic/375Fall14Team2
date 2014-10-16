@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background = "#754b22"
     tools:context="com.example.coffeeapp.Main" >
 
     <TableRow
@@ -20,16 +21,16 @@
             android:id="@+id/btnHot"
             android:layout_weight = ".75"
             android:layout_height="wrap_content"
+            android:background = "#a50e25"
             android:onClick = "btnHotClicked"
            
             android:text="Hot" />
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_weight = ".25"
-            android:gravity = "center"
             android:layout_height="wrap_content"
-            android:text="---" />
+            android:layout_weight=".25"
+            android:gravity="center" />
 
     </TableRow>
 
@@ -43,6 +44,8 @@
             android:id="@+id/btnCoffee"
             android:layout_width = "wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight = ".33"
+            android:background = "#0e5b0a"
             android:onClick = "coffeeClicked"
             android:text="Coffee" />
 
@@ -51,12 +54,14 @@
                     android:layout_width = "wrap_content"
             android:layout_height="match_parent"
             android:onClick = "frapClicked"
+            android:background = "#d89d08"
             android:text="Frappachino" />
 
         <Button
             android:id="@+id/btnExpres"
                       android:layout_width = "wrap_content"
             android:layout_height="match_parent"
+       android:background = "#15197f"
             android:onClick = "expresClicked"
             android:text="Expresso" />
 
@@ -71,6 +76,7 @@
             android:id="@+id/btnTall"
             android:layout_weight = ".33"
             android:layout_height="wrap_content"
+                    android:background = "#0e5b0a"
             android:onClick = "tallClicked"
             android:text="Tall" />
 
@@ -78,6 +84,7 @@
             android:id="@+id/btnGrande"
             android:layout_weight = ".33"
             android:layout_height="wrap_content"
+            android:background = "#d4db1a"
             android:onClick = "grandeClicked"
             android:text="Grande" />
 
@@ -86,6 +93,7 @@
             android:layout_weight = ".33"
             android:layout_height="wrap_content"
             android:onClick = "ventiClicked"
+            android:background = "#c40f0f"
             android:text="Venti" />
 
     </TableRow>
@@ -123,6 +131,7 @@
             android:id="@+id/btnAddDrink"
             android:layout_weight = "1"
             android:layout_height="wrap_content"
+            android:background = "#546dc9"
             android:onClick="addDrinkClicked"
             android:text="Add Drink" />
 
@@ -137,6 +146,7 @@
             android:id="@+id/btnResetDrink"
             android:layout_weight = "1"
             android:layout_height="wrap_content"
+            android:background = "#a9adbc"
             android:onClick = "resetDrink"
             android:text="Reset Order" />
 
@@ -149,17 +159,13 @@
 
         <TextView
             android:id="@+id/textDrinksAdded"
-            android:layout_weight = ".25"
             android:layout_height="wrap_content"
-            android:text="---" />
+            android:layout_weight=".25" />
 
         <TextView
             android:id="@+id/textCurrentDrink"
-
-            android:layout_weight = ".75"
             android:layout_height="wrap_content"
-
-            android:text="---" />
+            android:layout_weight=".75" />
 
     </TableRow>
 
