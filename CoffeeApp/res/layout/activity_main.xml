@@ -37,7 +37,6 @@
         android:id="@+id/tableRow2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="_baseline"
         android:gravity="center_vertical|center_horizontal" >
 
         <Button
@@ -135,7 +134,7 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/btnReset"
+            android:id="@+id/btnResetDrink"
             android:layout_weight = "1"
             android:layout_height="wrap_content"
             android:onClick = "resetDrink"
