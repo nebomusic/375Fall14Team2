@@ -11,6 +11,11 @@ public class Main extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		//initialize orders 
+		orders = new Orders();
+		currentDrink = new Drink ();
+		
 	}
 
 	@Override
