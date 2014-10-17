@@ -21,7 +21,7 @@
             android:id="@+id/btnHot"
             android:layout_weight = ".75"
             android:layout_height="wrap_content"
-            android:background = "#a50e25"
+            android:background = "#afa3a7"
             android:onClick = "btnHotClicked"
            
             android:text="Hot" />
@@ -45,7 +45,7 @@
             android:layout_width = "wrap_content"
             android:layout_height="match_parent"
             android:layout_weight = ".33"
-            android:background = "#0e5b0a"
+            android:background = "#d89d08"
             android:onClick = "coffeeClicked"
             android:text="Coffee" />
 
@@ -61,7 +61,7 @@
             android:id="@+id/btnExpres"
                       android:layout_width = "wrap_content"
             android:layout_height="match_parent"
-       android:background = "#15197f"
+            android:background = "#d89d08"
             android:onClick = "expresClicked"
             android:text="Expresso" />
 
@@ -76,7 +76,7 @@
             android:id="@+id/btnTall"
             android:layout_weight = ".33"
             android:layout_height="wrap_content"
-                    android:background = "#0e5b0a"
+            android:background = "#d89d08"
             android:onClick = "tallClicked"
             android:text="Tall" />
 
@@ -84,7 +84,7 @@
             android:id="@+id/btnGrande"
             android:layout_weight = ".33"
             android:layout_height="wrap_content"
-            android:background = "#d4db1a"
+            android:background = "#d89d08"
             android:onClick = "grandeClicked"
             android:text="Grande" />
 
@@ -93,7 +93,7 @@
             android:layout_weight = ".33"
             android:layout_height="wrap_content"
             android:onClick = "ventiClicked"
-            android:background = "#c40f0f"
+            android:background = "#d89d08"
             android:text="Venti" />
 
     </TableRow>

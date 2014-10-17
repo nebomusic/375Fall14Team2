@@ -12,6 +12,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class Main extends Activity {
+	private Orders orders;
+	private Drink currentDrink;
+	
 	private Button btnHot;
 	private Button btnCoffee;
 	private Button btnFrap;
@@ -82,7 +85,7 @@ ArrayAdapter<CharSequence>dairyadapter = ArrayAdapter.createFromResource(this,R.
 	}
 	
 	public void coffeeClicked(View v)  {
-		currrentDrink.setType("Coffee");
+		currentDrink.setType("Coffee");
 		btnCoffee.setBackgroundColor(Color.YELLOW);
 		btnFrap.setBackgroundColor(Color.LTGRAY);
 		btnExpres.setBackgroundColor(Color.LTGRAY);
