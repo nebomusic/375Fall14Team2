@@ -91,6 +91,84 @@ ArrayAdapter<CharSequence>dairyadapter = ArrayAdapter.createFromResource(this,R.
 		btnExpres.setBackgroundColor(Color.LTGRAY);
 		
 	}
+	
+	public void frapClicked (View v)   {
+		currentDrink.setType("frappacino");
+		btnCoffee.setBackgroundColor(Color.LTGRAY);
+		btnFrap.setBackgroundColor(Color.YELLOW);
+		btnExpres.setBackgroundColor(Color.LTGRAY);
+		
+	}
+	
+	public void expresClicked (View v)  {
+		currentDrink.setType("Expresso");
+		btnCoffee.setBackgroundColor(Color.LTGRAY);
+		btnFrap.setBackgroundColor(Color.LTGRAY);
+		btnExpres.setBackgroundColor(Color.YELLOW);
+	}
+	
+	
+	//Functions for Drink Sizes
+	
+	public void tallClicked(View v)  {
+		currentDrink.setSize(8);
+		btnTall.setBackgroundColor(Color.GREEN);
+		btnGrande.setBackgroundColor(Color.LTGRAY);
+		btnVenti.setBackgroundColor(Color.LTGRAY);
+	}
+	
+	public void grandeClicked(View v)   {
+		currentDrink.setSize(12);
+		btnTall.setBackgroundColor(Color.LTGRAY);
+		btnGrande.setBackgroundColor(Color.YELLOW);
+		btnVenti.setBackgroundColor(Color.LTGRAY);
+	}
+	
+	public void ventiClicked(View v)  {
+		currentDrink.setSize(20);
+		btnTall.setBackgroundColor(Color.LTGRAY);
+		btnGrande.setBackgroundColor(Color.LTGRAY);
+		btnVenti.setBackgroundColor(Color.YELLOW);
+	}
+	
+	
+	//Button to add drink 
+	
+	public void addDrinkClicked(View v)  {
+		currentDrink.setFlavor(String.valueOf(spinnerFlavor.getSelectedItem()));
+		currentDrink.setDairy(String.valueOf(spinnerDairy.getSelectedItem()));
+		orders.addDrink(currentDrink);
+		textDrinksAdded.setText(String.valueOf(orders.getNumDrinks()));
+		displayDrink(orders.getNumDrinks()-1);
+		resetDrink(v);
+		
+	}
+	
+	
+	//Button for reset 
+	
+	public void resetDrink(View v)  {
+		currentDrink = new Drink();
+		btnCoffee.setBackgroundColor(Color.LTGRAY);
+		btnFrap.setBackgroundColor(Color.LTGRAY);
+		btnExpres.setBackgroundColor(Color.LTGRAY);
+		
+		btnTall.setBackgroundColor(Color.LTGRAY);
+		btnGrande.setBackgroundColor(Color.LTGRAY);
+		btnVenti.setBackgroundColor(Color.LTGRAY);
+	}
+	
+	
+	private void displayDrink(int i)   {
+		String sOrder = "Just ordered:";
+		Drink dDrink = orders.getDrink(i);
+		sOrder += String.valueOf(dDrink.getSize()) + "ounces of";
+		sOrder += dDrink.getType() + "with";
+		sOrder += dDrink.getFlavor() + "and";
+		sOrder += dDrink.getDairy() + ".";
+		textCurrentDrink.setText(sOrder);
+		
+	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
