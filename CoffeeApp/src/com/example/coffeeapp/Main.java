@@ -156,15 +156,20 @@ ArrayAdapter<CharSequence>dairyadapter = ArrayAdapter.createFromResource(this,R.
 		btnTall.setBackgroundColor(Color.LTGRAY);
 		btnGrande.setBackgroundColor(Color.LTGRAY);
 		btnVenti.setBackgroundColor(Color.LTGRAY);
+		
+//		textCurrentDrink.setText("");
+//		textDrinksAdded.setText("");
+//		
+		
 	}
 	
 	
 	private void displayDrink(int i)   {
 		String sOrder = "Just ordered:";
 		Drink dDrink = orders.getDrink(i);
-		sOrder += String.valueOf(dDrink.getSize()) + "ounces of";
-		sOrder += dDrink.getType() + "with";
-		sOrder += dDrink.getFlavor() + "and";
+		sOrder += String.valueOf(dDrink.getSize()) + " ounces of ";
+		sOrder += dDrink.getType() + " with ";
+		sOrder += dDrink.getFlavor() + " and ";
 		sOrder += dDrink.getDairy() + ".";
 		textCurrentDrink.setText(sOrder);
 		

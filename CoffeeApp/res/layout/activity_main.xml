@@ -19,12 +19,12 @@
 
         <Button
             android:id="@+id/btnHot"
-            android:layout_weight = ".75"
+            android:layout_width = "match_parent"
             android:layout_height="wrap_content"
-            android:background = "#afa3a7"
+            android:background = "#edda8e"
             android:onClick = "btnHotClicked"
            
-            android:text="Hot" />
+            android:text="Hot/Cold" />
 
         <TextView
             android:id="@+id/textView1"
@@ -42,26 +42,26 @@
 
         <Button
             android:id="@+id/btnCoffee"
-            android:layout_width = "wrap_content"
+
             android:layout_height="match_parent"
             android:layout_weight = ".33"
-            android:background = "#d89d08"
+            android:background = "#afa3a7"
             android:onClick = "coffeeClicked"
             android:text="Coffee" />
 
         <Button
             android:id="@+id/btnFrap"
-                    android:layout_width = "wrap_content"
+android:layout_weight = ".33"
             android:layout_height="match_parent"
             android:onClick = "frapClicked"
-            android:background = "#d89d08"
+            android:background = "#afa3a7"
             android:text="Frappachino" />
 
         <Button
             android:id="@+id/btnExpres"
-                      android:layout_width = "wrap_content"
+            android:layout_weight = ".33"
             android:layout_height="match_parent"
-            android:background = "#d89d08"
+            android:background = "#afa3a7"
             android:onClick = "expresClicked"
             android:text="Expresso" />
 
@@ -76,7 +76,7 @@
             android:id="@+id/btnTall"
             android:layout_weight = ".33"
             android:layout_height="wrap_content"
-            android:background = "#d89d08"
+            android:background = "#afa3a7"
             android:onClick = "tallClicked"
             android:text="Tall" />
 
@@ -84,7 +84,7 @@
             android:id="@+id/btnGrande"
             android:layout_weight = ".33"
             android:layout_height="wrap_content"
-            android:background = "#d89d08"
+            android:background = "#afa3a7"
             android:onClick = "grandeClicked"
             android:text="Grande" />
 
@@ -93,7 +93,7 @@
             android:layout_weight = ".33"
             android:layout_height="wrap_content"
             android:onClick = "ventiClicked"
-            android:background = "#d89d08"
+                   android:background = "#afa3a7"
             android:text="Venti" />
 
     </TableRow>
@@ -105,7 +105,7 @@
 
         <Spinner
             android:id="@+id/spinnerFlavor"
-            android:layout_width="wrap_content"
+            android:layout_weight = "1"
             android:layout_height="wrap_content" />
 
     </TableRow>
@@ -117,7 +117,7 @@
 
         <Spinner
             android:id="@+id/spinnerDairy"
-            android:layout_width="wrap_content"
+            android:layout_weight = "1"
             android:layout_height="wrap_content" />
 
     </TableRow>
@@ -160,12 +160,12 @@
         <TextView
             android:id="@+id/textDrinksAdded"
             android:layout_height="wrap_content"
-            android:layout_weight=".25" />
+            android:layout_width = "wrap_content" />
 
         <TextView
             android:id="@+id/textCurrentDrink"
             android:layout_height="wrap_content"
-            android:layout_weight=".75" />
+            android:layout_width = "wrap_content" />
 
     </TableRow>
 
