@@ -1,0 +1,15 @@
+1. The app will have two different views. One for students and one for the testing proctor. 
+2. Students must be able to sign in.
+3. Student should select how long they have to complete the test.
+4. App should store all of the sudents taking the test.
+5. App should store how much time the students have to complete test. 
+6. Student should select what subject the test is in. App should store this information too. 
+7. Proctor view should see everyone who is taking the test, what time they signed in, what time they must leave.
+8. Way to create a new "day" in the testing center. 
+9. Send email to teacher when student completes test.
+10.
+
+   Classes
+1) Student - ID #, first name, last name, grade. 
+2) Test - subject, time in, time out, student who took test, (testing center form), materials allowed, test ID.
+3) Testing Cener - Lists of tests, 
