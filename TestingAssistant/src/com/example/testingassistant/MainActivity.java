@@ -6,6 +6,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends Activity {
+	
+	//Put Fields Here.Break up by students, tests, Testing Center
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
