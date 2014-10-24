@@ -1,11 +1,12 @@
 Question 1: What type of app would be the most useful in the testing center?
-
+- An app that can easily sign people in an out and keep tract of the test that they are taking. 
 Question 2: What are some essential functions of the app?
-
+- Sign in / out ability, ability to select how long the test is taken, and the ability for the proctor to view everyone taking a test.
 Question 3: What do you want to the app look like?
-
+- Easy to use with a proctor and student view.
 Question 4: Would you like a special page for proctors?
-
+- Yes
 Question 5: Do you want to be able to select the proctor for the day?
-
+- Yes
 Question 6: How often do you envison this being used?
+- If it works well, everyday.
