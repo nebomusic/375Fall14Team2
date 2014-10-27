@@ -37,6 +37,8 @@ public final class R {
         public static final int btnStandBy=0x7f08000c;
         public static final int btnStart=0x7f08001e;
         public static final int btnStudent=0x7f080008;
+        public static final int lstActiveStudents=0x7f08000d;
+        public static final int lstTimeRemaining=0x7f08000e;
         public static final int spinnerSubject=0x7f080014;
         public static final int spinnerType=0x7f080013;
         public static final int tableRow1=0x7f080001;
@@ -47,8 +49,6 @@ public final class R {
         public static final int tableRow6=0x7f08000b;
         public static final int tableRow7=0x7f080019;
         public static final int tableRow8=0x7f08001d;
-        public static final int txtActiveStudents=0x7f08000d;
-        public static final int txtAdminTests=0x7f08000e;
         public static final int txtEmail=0x7f080015;
         public static final int txtFirstName=0x7f08000f;
         public static final int txtInstructions=0x7f080006;

@@ -60,6 +60,7 @@
         <Button
             android:id="@+id/btnStudent"
             android:layout_weight = "1"
+            android:onClick = "btnStudentClicked"
             android:layout_height="wrap_content"
             android:text="Students" />
 
@@ -75,6 +76,7 @@
             android:id="@+id/btnProctor"
             android:layout_weight = "1"
             android:layout_height="wrap_content"
+            android:onClick = "btnProctorClicked"
             android:text="Proctor" />
 
     </TableRow>
@@ -89,6 +91,7 @@
             android:id="@+id/btnStandBy"
             android:layout_weight = "1"
             android:layout_height="wrap_content"
+            android:onClick = "btnStandBy"
             android:text="StandBy" />
 
     </TableRow>

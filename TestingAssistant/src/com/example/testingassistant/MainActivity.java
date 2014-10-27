@@ -2,8 +2,10 @@ package com.example.testingassistant;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -21,6 +23,8 @@ public class MainActivity extends Activity {
 	//Put Fields Here.Break up by students, tests, Testing Center
 	
 	// Main Activity - Complete (I have already added all of the objects for the main activity)
+	private Handler h;
+	private int RATE = 60000;
 	
 	private TextView txtWelcome;
 	private TextView txtVersion;
@@ -46,15 +50,19 @@ public class MainActivity extends Activity {
 	private Button btnStart;
 	
 	//Proctor Screen
-	private ListView lstStudents;
-	private ListView lstTests;
+	private ListView lstActiveStudents;
+	private ListView lstTimeRemaining;
 	private Button btnHome;
+	
+	private Student currentStudent;
+	
+	private int elapsedtime;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
 		//Bind Here: 
 		btnStudent = (Button)findViewById(R.id.btnStudent);
 		txtWelcome = (TextView)findViewById(R.id.txtWelcome);
@@ -80,11 +88,10 @@ public class MainActivity extends Activity {
 		btn130 = (Button)findViewById(R.id.btn130);
 		btn155 = (Button)findViewById(R.id.btn155);
 		btnStart = (Button)findViewById(R.id.btnStart);
-		lstStudents = (ListView)findViewById(R.id.txtActiveStudents);
-		lstTests = (ListView)findViewById(R.id.txtAdminTests);
+		lstTimeRemaining = (ListView)findViewById(R.id.);
+		lstActiveStudents = (ListView)findViewById(R.id.);
 	//	btnHome = (Button)findViewById(R.id.btnHome);
-		
-		
+			
 	}
 
 	@Override
@@ -105,4 +112,62 @@ public class MainActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
+	public void btnStudentClicked (View V){
+		setContentView(R.layout.screen_student);
+	}
+	
+	public void btnProctorClicked (View v){
+		setContentView(R.layout.screen_proctor);
+	}
+	
+	public void btnStartClicked (View v){
+		//Timer Code Part 1
+		elapsedtime = 0;
+		h = new Handler ();
+		count();
+		//End Timer Code
+
+	//TODO Set elapsed time to txt object
+		
+		//Properties
+		currentStudent.FirstName = (String) txtFirstName.getText();
+		currentStudent.LastName = (String) txtLastName.getText();
+		currentStudent.studentID = (String)txtStudentId.getText();
+		currentStudent.email = (String)txtEmail.getText();
+		
+		
+		//View Change
+		setContentView(R.layout.activity_main);
+	}
+	
+	public void btn30clicked (View v){
+		currentStudent.examTime = 30;
+	}
+	
+	public void btn55clicked (View v){
+		currentStudent.examTime = 55;
+	}
+//TODO have John continue functions.
+	
+	
+	
+	
+//Part 2 Timer Code
+	private Runnable r = new Runnable(){
+		@Override
+		public void run() {
+			count(); //call function
+		}
+	};
+	public void count(){
+		elapsedtime ++;
+		
+		h.postDelayed(r,RATE);
+		
+	}
+//End Timer Code
+	
+
 }
