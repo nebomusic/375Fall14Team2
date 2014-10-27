@@ -28,10 +28,25 @@ public class MainActivity extends Activity {
 	private Button btnStandBy;
 	
 	//Students Class
+	private TextView txtFirstName
+	private TextView txtLastName
+	private TextView txtStudentId
+	private TextView txtTeacher
+	private Spinner Subject
+	private Spinner Type
+	private TextView txtEmail
+	private Button btn15
+	private Button btn30
+	private Button btn55
+	private Button btn115
+	private Button btn130
+	private Button btn155
+	private Button btnStart
 	
-	//Test Class
-	
-	//Testomg Center Class
+	//Proctor Screen
+	private ListView lstStudents
+	private ListView lstTests
+	private Button btnHome
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +57,26 @@ public class MainActivity extends Activity {
 		btnStudent = (Button)findViewById(R.id.btnStudent);
 		txtWelcome = (TextView)findViewById(R.id.txtWelcome);
 		txtInstructions = (TextView)findViewById(R.id.txtInstructions);
+		txtVersion = (TextView)findViewById(R.id.txtVersion);
+		btnProctor = (Button)findViewById(R.id.btnProctor);
+		btnStandBy = (Button)findViewById(R.id.btnStandBy);
+		txtFirstName = (TextView)findViewById(R.id.txtFirstName);
+		txtLastName = (TextView)findViewById(R.id.txtLastName);
+		txtStudentId = (TextView)findViewById(R.id.txtStudentId);
+		txtTeacher = (TextView)findViewById(R.id.txtTeacher);
+		SpinnerType = (Spinner)findViewById(R.id.SpinnerType);
+		SpinnerSubject = (Spinner)findViewById(R.id.SpinnerSubject);
+		txtEmail = (TextView)findViewById(R.id.txtEmail);
+		btn15 = (Button)findViewById(R.id.btn15);
+		btn30 = (Button)findViewById(R.id.btn30);
+		btn55 = (Button)findViewById(R.id.btn55);
+		btn115 = (Button)findViewById(R.id.btn115);
+		btn130 = (Button)findViewById(R.id.btn130);
+		btn155 = (Button)findViewById(R.id.btn155);
+		btnStart = (Button)findViewById(R.id.btnStart)
+		lstStudents = (ListView)findViewById(R.id.lstStudents);
+		lstTests = (ListView)findViewById(R.id.lstTests);
+		btnHome = (Button)findViewById(R.id.btnHome);
 		
 		
 	}
