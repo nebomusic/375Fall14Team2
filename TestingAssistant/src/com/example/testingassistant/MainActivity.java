@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -28,25 +30,25 @@ public class MainActivity extends Activity {
 	private Button btnStandBy;
 	
 	//Students Class
-	private TextView txtFirstName
-	private TextView txtLastName
-	private TextView txtStudentId
-	private TextView txtTeacher
-	private Spinner Subject
-	private Spinner Type
-	private TextView txtEmail
-	private Button btn15
-	private Button btn30
-	private Button btn55
-	private Button btn115
-	private Button btn130
-	private Button btn155
-	private Button btnStart
+	private TextView txtFirstName;
+	private TextView txtLastName;
+	private TextView txtStudentId;
+	private TextView txtTeacher;
+	private Spinner Subject;
+	private Spinner Type;
+	private TextView txtEmail;
+	private Button btn15;
+	private Button btn30;
+	private Button btn55;
+	private Button btn115;
+	private Button btn130;
+	private Button btn155;
+	private Button btnStart;
 	
 	//Proctor Screen
-	private ListView lstStudents
-	private ListView lstTests
-	private Button btnHome
+	private ListView lstStudents;
+	private ListView lstTests;
+	private Button btnHome;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +64,14 @@ public class MainActivity extends Activity {
 		btnStandBy = (Button)findViewById(R.id.btnStandBy);
 		txtFirstName = (TextView)findViewById(R.id.txtFirstName);
 		txtLastName = (TextView)findViewById(R.id.txtLastName);
-		txtStudentId = (TextView)findViewById(R.id.txtStudentId);
+		txtStudentId = (TextView)findViewById(R.id.txtStudentID);
 		txtTeacher = (TextView)findViewById(R.id.txtTeacher);
-		SpinnerType = (Spinner)findViewById(R.id.SpinnerType);
-		SpinnerSubject = (Spinner)findViewById(R.id.SpinnerSubject);
+		
+		//Check Spinners
+		Type = (Spinner)findViewById(R.id.spinnerType);
+		 Subject = (Spinner)findViewById(R.id.spinnerSubject);
+		 
+		 
 		txtEmail = (TextView)findViewById(R.id.txtEmail);
 		btn15 = (Button)findViewById(R.id.btn15);
 		btn30 = (Button)findViewById(R.id.btn30);
@@ -73,10 +79,10 @@ public class MainActivity extends Activity {
 		btn115 = (Button)findViewById(R.id.btn115);
 		btn130 = (Button)findViewById(R.id.btn130);
 		btn155 = (Button)findViewById(R.id.btn155);
-		btnStart = (Button)findViewById(R.id.btnStart)
-		lstStudents = (ListView)findViewById(R.id.lstStudents);
-		lstTests = (ListView)findViewById(R.id.lstTests);
-		btnHome = (Button)findViewById(R.id.btnHome);
+		btnStart = (Button)findViewById(R.id.btnStart);
+		lstStudents = (ListView)findViewById(R.id.txtActiveStudents);
+		lstTests = (ListView)findViewById(R.id.txtAdminTests);
+	//	btnHome = (Button)findViewById(R.id.btnHome);
 		
 		
 	}
