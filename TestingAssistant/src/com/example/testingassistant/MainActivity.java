@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -102,6 +103,22 @@ public class MainActivity extends Activity {
 		count();
 		
 		testingCenter= new TestingCenter(); 
+		
+		
+		//Test Type Slider
+		ArrayAdapter<CharSequence>typeadaptor = ArrayAdapter.createFromResource(this,R.array.type_array, android.R.layout.simple_spinner_dropdown_item);
+		
+		typeadaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		
+		Type.setAdapter(typeadaptor);
+		
+		
+		//Test Subject Slider
+		ArrayAdapter<CharSequence>subjectAdaptor = ArrayAdapter.createFromResource(this,R.array.dairy_array, android.R.layout.simple_spinner_dropdown_item);
+		
+		subjectAdaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		
+		Subject.setAdapter(subjectAdaptor);
 	}
 	
 	public void count(){
@@ -144,34 +161,7 @@ public class MainActivity extends Activity {
 	public void btnProctorClicked (View v){
 		setContentView(R.layout.screen_proctor);
 	}
-	
-	
-	
-	
-	public void btnStartClicked (View v){
-		currentStudent.timeIn = elapsedtime;
-		currentStudent.timeOut = elapsedtime + currentStudent.examTime;
-		
-		
-		//Properties
-		currentStudent.FirstName = (String) txtFirstName.getText();
-		currentStudent.LastName = (String) txtLastName.getText();
-		currentStudent.studentID = (String)txtStudentId.getText();
-		currentStudent.email = (String)txtEmail.getText();
-	
-
-		testingCenter.addStudent(currentStudent);
-		
-
-
-		
-		
-		
-		//View Change
-		setContentView(R.layout.activity_main);
-		
-		
-	}
+	//TODO add other functions for other 3 time buttons.
 	
 	public void btn30clicked (View v){
 		currentStudent.examTime = 30;
@@ -180,14 +170,57 @@ public class MainActivity extends Activity {
 	public void btn55clicked (View v){
 		currentStudent.examTime = 55;
 	}
-//TODO have John continue functions.
+	public void btn130clicked (View v){
+		currentStudent.examTime = 130;
+	}
 	
 	
-	
+	//This will be our last function.
+	public void btnStartClicked (View v){
+		//Times
+		currentStudent.timeIn = elapsedtime;
+			currentStudent.timeOut = elapsedtime + currentStudent.examTime;
+		
+		
+		//Set Student class attributes
+		currentStudent.FirstName = (String) txtFirstName.getText();
+			currentStudent.LastName = (String) txtLastName.getText();
+			currentStudent.studentID = (String)txtStudentId.getText();
+			currentStudent.email = (String)txtEmail.getText();
 	
 
-
-//End Timer Code
+		//Add a new student to the list.
+		testingCenter.addStudent(currentStudent); 
+		
+		//Test Properties and Add to List
+		currentTest.setTeacher(txtTeacher.getText().toString());
+			//Spinner
+			currentTest.setType(String.valueOf(Type.getSelectedItem()));
+			currentTest.setSubject(String.valueOf(Subject.getSelectedItem()));
+			//Increase TestId by 1
+			currentTest.testId ++;
+			//Add to list
+			testingCenter.addTest(currentTest);
+		
+		//Spinner
+		currentTest.setType(String.valueOf(Type.getSelectedItem()));
+			currentTest.setSubject(String.valueOf(Subject.getSelectedItem()));
+		
+		//View Change
+		setContentView(R.layout.activity_main);
+		//New Instances
+		currentStudent = new Student();
+			currentTest = new Test();
+			
+			//Reset Everything back to normal
+						reset();
+	}
+	
+//TODO reset code. Follow this example.
+	public void reset(){
+		txtFirstName.setText("");
+			txtFirstName.setHint("First Name");
+	}
 	
 
 }
