@@ -158,12 +158,12 @@ public class MainActivity extends Activity {
 		currentStudent.LastName = (String) txtLastName.getText();
 		currentStudent.studentID = (String)txtStudentId.getText();
 		currentStudent.email = (String)txtEmail.getText();
-		
-		currentTest.
+	
 
 		testingCenter.addStudent(currentStudent);
 		
-		
+
+
 		
 		
 		

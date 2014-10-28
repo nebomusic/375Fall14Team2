@@ -2,12 +2,12 @@ package com.example.testingassistant;
 
 public class Test {
 	
-	private String teacher;
-	private String type;
-	private String testId;
-	private String startTime;
-	private String outTime;
-	private int elapsedTime;
+	public String teacher;
+	public String type;
+	public String testId;
+	public String startTime;
+	public String outTime;
+	public int elapsedTime;
 	
 	public Test (){
 		
@@ -15,6 +15,11 @@ public class Test {
 	
 	public String getTeacher() {
 		return teacher;
+	}
+
+	public void getTeacher(CharSequence text) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
