@@ -2,12 +2,21 @@ package com.example.testingassistant;
 
 public class Test {
 	
-	private String Teacher;
-	private String Type;
+	private String teacher;
+	private String type;
 	private String testId;
-	private String StartTime;
-	private String OutTime;
-	private int ElapsedTime;
+	private String startTime;
+	private String outTime;
+	private int elapsedTime;
 	
-
+	public Test (){
+		
+	}
+	
+	public String getTeacher() {
+		return teacher;
+	}
+	
+	
+	
 }

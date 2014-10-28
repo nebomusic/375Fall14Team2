@@ -12,7 +12,7 @@
 
     <ListView
         android:id="@+id/lstTimeRemaining"
-        android:layout_width="500dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" >
         
     </ListView>

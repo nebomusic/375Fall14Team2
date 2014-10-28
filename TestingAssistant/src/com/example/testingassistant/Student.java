@@ -7,6 +7,9 @@ public class Student {
 	public String studentID;
 	public String email;
 	public int examTime;
+	public int timeIn;
+	public int timeOut;
+	
 
 	
 	

@@ -26,6 +26,8 @@ public class MainActivity extends Activity {
 	private Handler h;
 	private int RATE = 60000;
 	
+	private TestingCenter testingCenter; 
+	
 	private TextView txtWelcome;
 	private TextView txtVersion;
 	private TextView txtInstructions;
@@ -55,6 +57,7 @@ public class MainActivity extends Activity {
 	private Button btnHome;
 	
 	private Student currentStudent;
+	private Test currentTest;
 	
 	private int elapsedtime;
 
@@ -88,11 +91,31 @@ public class MainActivity extends Activity {
 		btn130 = (Button)findViewById(R.id.btn130);
 		btn155 = (Button)findViewById(R.id.btn155);
 		btnStart = (Button)findViewById(R.id.btnStart);
-		lstTimeRemaining = (ListView)findViewById(R.id.);
-		lstActiveStudents = (ListView)findViewById(R.id.);
+		//lstTimeRemaining = (ListView)findViewById(R.id.);
+		//lstActiveStudents = (ListView)findViewById(R.id.);
 	//	btnHome = (Button)findViewById(R.id.btnHome);
-			
+		
+		
+
+		elapsedtime = 0;
+		h = new Handler ();
+		count();
+		
+		testingCenter= new TestingCenter(); 
 	}
+	
+	public void count(){
+		elapsedtime ++;
+		
+		h.postDelayed(r,RATE);
+
+		};
+		private Runnable r = new Runnable(){
+			@Override
+			public void run() {
+				count(); //call function
+			}
+	};
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -122,14 +145,13 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.screen_proctor);
 	}
 	
+	
+	
+	
 	public void btnStartClicked (View v){
-		//Timer Code Part 1
-		elapsedtime = 0;
-		h = new Handler ();
-		count();
-		//End Timer Code
-
-	//TODO Set elapsed time to txt object
+		currentStudent.timeIn = elapsedtime;
+		currentStudent.timeOut = elapsedtime + currentStudent.examTime;
+		
 		
 		//Properties
 		currentStudent.FirstName = (String) txtFirstName.getText();
@@ -137,9 +159,18 @@ public class MainActivity extends Activity {
 		currentStudent.studentID = (String)txtStudentId.getText();
 		currentStudent.email = (String)txtEmail.getText();
 		
+		currentTest.
+
+		testingCenter.addStudent(currentStudent);
+		
+		
+		
+		
 		
 		//View Change
 		setContentView(R.layout.activity_main);
+		
+		
 	}
 	
 	public void btn30clicked (View v){
@@ -154,19 +185,8 @@ public class MainActivity extends Activity {
 	
 	
 	
-//Part 2 Timer Code
-	private Runnable r = new Runnable(){
-		@Override
-		public void run() {
-			count(); //call function
-		}
-	};
-	public void count(){
-		elapsedtime ++;
-		
-		h.postDelayed(r,RATE);
-		
-	}
+
+
 //End Timer Code
 	
 
