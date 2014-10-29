@@ -1,6 +1,7 @@
 package com.example.testingassistant;
 
 import android.app.Activity;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
@@ -13,17 +14,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-	// Hey John,
-	// Go ahead and declare the fields for all of the XML objects. To do this, Just look at the designs (UI's) that are
-	// in the testing center folder in github and follow the example below for all of the buttons, text objects, and list views.
-	// Also, go ahead and bind all of the xml objects in the on create.
-	// Good Luck!
-	// Make sure to git add, git commit, git push, and git pull!
-	
-	
-	//Put Fields Here.Break up by students, tests, Testing Center
-	
-	// Main Activity - Complete (I have already added all of the objects for the main activity)
 	private Handler h;
 	private int RATE = 60000;
 	
@@ -41,8 +31,8 @@ public class MainActivity extends Activity {
 	private TextView txtLastName;
 	private TextView txtStudentId;
 	private TextView txtTeacher;
-	private Spinner Subject;
-	private Spinner Type;
+	private Spinner subject;
+	private Spinner type;
 	private TextView txtEmail;
 	private Button btn15;
 	private Button btn30;
@@ -80,8 +70,8 @@ public class MainActivity extends Activity {
 		txtTeacher = (TextView)findViewById(R.id.txtTeacher);
 		
 		//Check Spinners
-		Type = (Spinner)findViewById(R.id.spinnerType);
-		 Subject = (Spinner)findViewById(R.id.spinnerSubject);
+		type = (Spinner)findViewById(R.id.spinnerType);
+		 subject = (Spinner)findViewById(R.id.spinnerSubject);
 		 
 		 
 		txtEmail = (TextView)findViewById(R.id.txtEmail);
@@ -104,21 +94,7 @@ public class MainActivity extends Activity {
 		
 		testingCenter= new TestingCenter(); 
 		
-		
-		//Test Type Slider
-		ArrayAdapter<CharSequence>typeadaptor = ArrayAdapter.createFromResource(this,R.array.type_array, android.R.layout.simple_spinner_dropdown_item);
-		
-		typeadaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		
-		Type.setAdapter(typeadaptor);
-		
-		
-		//Test Subject Slider
-		ArrayAdapter<CharSequence>subjectAdaptor = ArrayAdapter.createFromResource(this,R.array.dairy_array, android.R.layout.simple_spinner_dropdown_item);
-		
-		subjectAdaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		
-		Subject.setAdapter(subjectAdaptor);
+
 	}
 	
 	public void count(){
@@ -126,7 +102,7 @@ public class MainActivity extends Activity {
 		
 		h.postDelayed(r,RATE);
 
-		};
+		}
 		private Runnable r = new Runnable(){
 			@Override
 			public void run() {
@@ -156,25 +132,48 @@ public class MainActivity extends Activity {
 	
 	public void btnStudentClicked (View V){
 		setContentView(R.layout.screen_student);
+		
+		//Test Type Slider
+		ArrayAdapter<CharSequence> typeadaptor = ArrayAdapter.createFromResource(this,R.array.type_array, android.R.layout.simple_spinner_dropdown_item);
+		
+		typeadaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		
+		type.setAdapter(typeadaptor);
+		
+		
+		//Test Subject Slider
+		ArrayAdapter<CharSequence>subjectadaptor = ArrayAdapter.createFromResource(this,R.array.subject_array, android.R.layout.simple_spinner_dropdown_item);
+		
+		subjectadaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		
+		subject.setAdapter(subjectadaptor);
+		
 	}
-	
+	//Error with the handle clicked. 
 	public void btnProctorClicked (View v){
+		
 		setContentView(R.layout.screen_proctor);
 	}
-	//TODO add other functions for other 3 time buttons.
-	
+
+	public void btn15clicked (View v){
+		currentStudent.examTime = 15;
+	}
 	public void btn30clicked (View v){
 		currentStudent.examTime = 30;
 	}
-	
 	public void btn55clicked (View v){
 		currentStudent.examTime = 55;
+	}
+	public void btn115clicked (View v){
+		currentStudent.examTime = 115;
 	}
 	public void btn130clicked (View v){
 		currentStudent.examTime = 130;
 	}
-	
-	
+	public void btn155clicked (View v){
+		currentStudent.examTime = 155;
+	}
+
 	//This will be our last function.
 	public void btnStartClicked (View v){
 		//Times
@@ -195,31 +194,33 @@ public class MainActivity extends Activity {
 		//Test Properties and Add to List
 		currentTest.setTeacher(txtTeacher.getText().toString());
 			//Spinner
-			currentTest.setType(String.valueOf(Type.getSelectedItem()));
-			currentTest.setSubject(String.valueOf(Subject.getSelectedItem()));
+			currentTest.setType(String.valueOf(type.getSelectedItem()));
+			currentTest.setSubject(String.valueOf(subject.getSelectedItem()));
 			//Increase TestId by 1
 			currentTest.testId ++;
 			//Add to list
 			testingCenter.addTest(currentTest);
 		
-		//Spinner
-		currentTest.setType(String.valueOf(Type.getSelectedItem()));
-			currentTest.setSubject(String.valueOf(Subject.getSelectedItem()));
+		//Add Spinner result to class attribute
+			currentTest.setType(String.valueOf(type.getSelectedItem()));
+			currentTest.setSubject(String.valueOf(subject.getSelectedItem()));
 		
+		//Add Student to list view
+			
 		//View Change
 		setContentView(R.layout.activity_main);
-		//New Instances
+		
+//Reset Functions
 		currentStudent = new Student();
 			currentTest = new Test();
-			
-			//Reset Everything back to normal
-						reset();
+						resetText();
 	}
-	
-//TODO reset code. Follow this example.
-	public void reset(){
+	public void resetText(){
 		txtFirstName.setText("");
 			txtFirstName.setHint("First Name");
+		txtLastName.setText("");
+			txtLastName.setHint("Last Name");
+			
 	}
 	
 
