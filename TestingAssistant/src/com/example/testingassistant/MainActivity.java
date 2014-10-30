@@ -92,9 +92,11 @@ public class MainActivity extends Activity {
 		h = new Handler ();
 		count();
 		
+		//Start
 		testingCenter= new TestingCenter(); 
+		currentStudent = new Student();
+		currentTest = new Test();
 		
-
 	}
 	
 	public void count(){
@@ -131,22 +133,40 @@ public class MainActivity extends Activity {
 	
 	
 	public void btnStudentClicked (View V){
+		
 		setContentView(R.layout.screen_student);
 		
-		//Test Type Slider
-		ArrayAdapter<CharSequence> typeadaptor = ArrayAdapter.createFromResource(this,R.array.type_array, android.R.layout.simple_spinner_dropdown_item);
+		txtFirstName = (TextView)findViewById(R.id.txtFirstName);
+		txtLastName = (TextView)findViewById(R.id.txtLastName);
+		txtStudentId = (TextView)findViewById(R.id.txtStudentID);
+		txtTeacher = (TextView)findViewById(R.id.txtTeacher);
+		txtEmail = (TextView)findViewById(R.id.txtEmail); 
 		
+		//Check Spinners
+		type = (Spinner)findViewById(R.id.spinnerType);
+		 subject = (Spinner)findViewById(R.id.spinnerSubject);
+		 
+		btn15 = (Button)findViewById(R.id.btn15);
+		btn30 = (Button)findViewById(R.id.btn30);
+		btn55 = (Button)findViewById(R.id.btn55);
+		btn115 = (Button)findViewById(R.id.btn115);
+		btn130 = (Button)findViewById(R.id.btn130);
+		btn155 = (Button)findViewById(R.id.btn155);
+		btnStart = (Button)findViewById(R.id.btnStart);
+		
+	//Test Type Slider
+	ArrayAdapter<CharSequence> typeadaptor = ArrayAdapter.createFromResource(this,R.array.type_array, android.R.layout.simple_spinner_dropdown_item);
+	
 		typeadaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		
-		type.setAdapter(typeadaptor);
-		
+		type.setAdapter(typeadaptor);		
 		
 		//Test Subject Slider
 		ArrayAdapter<CharSequence>subjectadaptor = ArrayAdapter.createFromResource(this,R.array.subject_array, android.R.layout.simple_spinner_dropdown_item);
 		
 		subjectadaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		
-		subject.setAdapter(subjectadaptor);
+	subject.setAdapter(subjectadaptor);
 		
 	}
 	//Error with the handle clicked. 
@@ -155,22 +175,22 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.screen_proctor);
 	}
 
-	public void btn15clicked (View v){
+	public void btn15Clicked (View v){
 		currentStudent.examTime = 15;
 	}
-	public void btn30clicked (View v){
+	public void btn30Clicked (View v){
 		currentStudent.examTime = 30;
 	}
-	public void btn55clicked (View v){
+	public void btn55Clicked (View v){
 		currentStudent.examTime = 55;
 	}
-	public void btn115clicked (View v){
+	public void btn115Clicked (View v){
 		currentStudent.examTime = 115;
 	}
-	public void btn130clicked (View v){
+	public void btn130Clicked (View v){
 		currentStudent.examTime = 130;
 	}
-	public void btn155clicked (View v){
+	public void btn155Clicked (View v){
 		currentStudent.examTime = 155;
 	}
 
@@ -178,15 +198,15 @@ public class MainActivity extends Activity {
 	public void btnStartClicked (View v){
 		//Times
 		currentStudent.timeIn = elapsedtime;
-			currentStudent.timeOut = elapsedtime + currentStudent.examTime;
-		
+		currentStudent.timeOut = elapsedtime + currentStudent.examTime;
+//		
 		
 		//Set Student class attributes
-		currentStudent.FirstName = (String) txtFirstName.getText();
-			currentStudent.LastName = (String) txtLastName.getText();
-			currentStudent.studentID = (String)txtStudentId.getText();
-			currentStudent.email = (String)txtEmail.getText();
-	
+		currentStudent.FirstName = txtFirstName.getText().toString();
+			currentStudent.LastName = txtLastName.getText().toString();
+			currentStudent.studentID = txtStudentId.getText().toString();
+			currentStudent.email = txtEmail.getText().toString();
+//	
 
 		//Add a new student to the list.
 		testingCenter.addStudent(currentStudent); 
@@ -222,6 +242,11 @@ public class MainActivity extends Activity {
 			txtLastName.setHint("Last Name");
 			
 	}
-	
+	// Hey John, 
+	// To set the colors go to the xml (screen_students) (screen_proctor) and write the following code:
+	// android:background = "# (hex code here)"
+	// To find the hex code just click on the bookmark that I made in ur browser.
+	//Use whatever colors that you want!
+	// Do this by tomorrows class so that we can finish in class. 
 
 }
