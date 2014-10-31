@@ -1,5 +1,8 @@
 package com.example.testingassistant;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 
 import android.os.Bundle;
@@ -26,6 +29,8 @@ public class MainActivity extends Activity {
 	private Button btnProctor;
 	private Button btnStandBy;
 	
+	// Array Adaptor
+
 	//Students Class
 	private TextView txtFirstName;
 	private TextView txtLastName;
@@ -82,10 +87,9 @@ public class MainActivity extends Activity {
 		btn130 = (Button)findViewById(R.id.btn130);
 		btn155 = (Button)findViewById(R.id.btn155);
 		btnStart = (Button)findViewById(R.id.btnStart);
-		//lstTimeRemaining = (ListView)findViewById(R.id.);
-		//lstActiveStudents = (ListView)findViewById(R.id.);
+
 	//	btnHome = (Button)findViewById(R.id.btnHome);
-		
+
 		
 
 		elapsedtime = 0;
@@ -96,6 +100,8 @@ public class MainActivity extends Activity {
 		testingCenter= new TestingCenter(); 
 		currentStudent = new Student();
 		currentTest = new Test();
+		//New Code
+
 		
 	}
 	
@@ -171,8 +177,25 @@ public class MainActivity extends Activity {
 	}
 	//Error with the handle clicked. 
 	public void btnProctorClicked (View v){
-		
 		setContentView(R.layout.screen_proctor);
+		lstActiveStudents = (ListView)findViewById(R.id.lstActiveStudents);
+		lstTimeRemaining = (ListView)findViewById(R.id.lstTimeRemaining);
+		
+		// test
+//		List <String> myTestList = new ArrayList<String>(0);
+//		
+//		myTestList.add("Hello");
+//		myTestList.add("Mr. Michaud");
+		
+
+		
+
+		
+		ArrayAdapter<String> studentAdaptor = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myTestList);
+		studentAdaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		lstActiveStudents.setAdapter(studentAdaptor);
+		
+		
 	}
 
 	public void btn15Clicked (View v){
@@ -226,6 +249,7 @@ public class MainActivity extends Activity {
 			currentTest.setSubject(String.valueOf(subject.getSelectedItem()));
 		
 		//Add Student to list view
+		
 			
 		//View Change
 		setContentView(R.layout.activity_main);
