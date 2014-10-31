@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background = "#c1cbff"
     android:orientation="vertical" >
 
     <TableRow
@@ -96,6 +97,7 @@
             android:layout_weight = ".33"
             android:onClick = "btn15Clicked"
             android:layout_height="wrap_content"
+            android:background = "#ff23f7"
             android:text="15" />
 
         <Button
@@ -103,6 +105,7 @@
             android:layout_weight = ".33"
             android:onClick = "btn30Clicked"
             android:layout_height="wrap_content"
+            android:background = "#eeff0a"
             android:text="30" />
 
         <Button
@@ -110,6 +113,7 @@
             android:layout_weight = ".33"
             android:onClick = "btn55Clicked"
             android:layout_height="wrap_content"
+            android:background = "#ff23f7"
             android:text="55" />
 
     </TableRow>
@@ -124,6 +128,7 @@
             android:layout_weight = ".33"
             android:onClick = "btn115Clicked"
             android:layout_height="wrap_content"
+            android:background = "#eeff0a"
             android:text="1:15" />
 
         <Button
@@ -131,6 +136,7 @@
             android:layout_weight = ".33"
             android:layout_height="wrap_content"
             android:onClick = "btn130Clicked"
+            android:background = "#ff23f7"
             android:text="1:30" />
 
         <Button
@@ -138,6 +144,7 @@
             android:layout_weight = ".33"
             android:layout_height="wrap_content"
             android:onClick="btn155Clicked"
+            android:background = "#eeff0a"
             android:text="1:55" />
 
     </TableRow>
@@ -152,6 +159,7 @@
             android:layout_weight = "1"
             android:onClick = "btnStartClicked"
             android:layout_height="wrap_content"
+            android:background = "#ff2c07"
             android:text="Start" />
 
     </TableRow>
