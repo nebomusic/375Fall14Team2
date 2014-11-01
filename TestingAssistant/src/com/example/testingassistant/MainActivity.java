@@ -50,7 +50,8 @@ public class MainActivity extends Activity {
 	//Proctor Screen
 	private ListView lstActiveStudents;
 	private ListView lstTimeRemaining;
-	private Button btnHome;
+	private Button btnProctorHome;
+	
 	
 	private Student currentStudent;
 	private Test currentTest;
@@ -88,7 +89,7 @@ public class MainActivity extends Activity {
 		btn155 = (Button)findViewById(R.id.btn155);
 		btnStart = (Button)findViewById(R.id.btnStart);
 
-	//	btnHome = (Button)findViewById(R.id.btnHome);
+		btnProctorHome = (Button)findViewById(R.id.btnProctorHome);
 
 		
 

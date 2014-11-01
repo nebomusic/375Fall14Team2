@@ -7,13 +7,13 @@
 
     <ListView
         android:id="@+id/lstActiveStudents"
-        android:layout_width="133dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content" >
     </ListView>
 
     <ListView
         android:id="@+id/lstTimeRemaining"
-        android:layout_width="146dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content" >
         
     </ListView>
