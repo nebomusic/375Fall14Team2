@@ -101,7 +101,6 @@ public class MainActivity extends Activity {
 		currentStudent = new Student();
 		currentTest = new Test();
 		//New Code
-
 		
 	}
 	
@@ -191,9 +190,10 @@ public class MainActivity extends Activity {
 		
 
 		
-		ArrayAdapter<String> studentAdaptor = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myTestList);
+		ArrayAdapter<String> studentAdaptor = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, testingCenter.getStudentNames());
 		studentAdaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		lstActiveStudents.setAdapter(studentAdaptor);
+		
 		
 		
 	}

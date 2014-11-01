@@ -26,10 +26,12 @@ students.add(s);
  public List<Test> getTest(){
 	 return tests;
  }
-public List<String>getStudentNames(){
-		List <String>StudentNames = new ArrayList<String>(0);
+public List<String> getStudentNames(){
+		List <String>studentNames = new ArrayList<String>(0);
 		for(int i = 0 ;  i < students.size(); i++){
-			StudentNames.add(students(i).FirstName);}
+			studentNames.add(students.get(i).FirstName);
 		}
-//return StudentNames;
+		return studentNames;
+	}
+
 }
