@@ -216,7 +216,11 @@ public class MainActivity extends Activity {
 	public void btn155Clicked (View v){
 		currentStudent.examTime = 155;
 	}
-
+	
+	public void btnProctorHomeClicked(View v){
+		
+		setContentView(R.layout.activity_main);
+	}
 	//This will be our last function.
 	public void btnStartClicked (View v){
 		//Times

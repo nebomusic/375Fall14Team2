@@ -13,9 +13,16 @@
 
     <ListView
         android:id="@+id/lstTimeRemaining"
-        android:layout_width="match_parent"
+        android:layout_width="146dp"
         android:layout_height="wrap_content" >
         
     </ListView>
+
+    <Button
+        android:id="@+id/btnProctorHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick = "btnProctorHomeClicked"
+        android:text="Home" />
 
 </LinearLayout>
